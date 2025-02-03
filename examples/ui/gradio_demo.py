@@ -65,8 +65,7 @@ async def run_browser_task(
 			llm=ChatOpenAI(model='gpt-4o'),
 		)
 		result = await agent.run()
-		#  TODO: The result cloud be parsed better
-		return result
+		return str(result)  # Convert AgentHistoryList to string
 	except Exception as e:
 		return f'Error: {str(e)}'
 

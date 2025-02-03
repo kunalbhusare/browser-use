@@ -13,8 +13,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/gregpr07)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/mamagnus00)
 
-
-🌐 Browser-use is the easiest way to connect your AI agents with the browser. 
+🌐 Browser-use is the easiest way to connect your AI agents with the browser.
 
 💡 See what others are building and share your projects in our [Discord](https://link.browser-use.com/discord) - we'd love to see what you create!
 
@@ -61,7 +60,6 @@ OPENAI_API_KEY=
 ```
 
 For other settings, models, and more, check out the [documentation 📕](https://docs.browser-use.com).
-
 
 ### Test with UI
 
@@ -138,6 +136,32 @@ We love contributions! Feel free to open issues for bugs or feature requests. To
 
 ## Local Setup
 
+### Setting up Virtual Environment
+
+#### For Windows Users:
+
+```bash
+.\activate.bat
+```
+
+#### For Mac/Linux Users:
+
+```bash
+# Make the script executable (one-time setup)
+chmod +x activate.sh
+
+# Activate virtual environment
+./activate.sh
+```
+
+The virtual environment will be created automatically if it doesn't exist, and then activated.
+
+To deactivate the virtual environment at any time, simply run:
+
+```bash
+deactivate
+```
+
 To learn more about the library, check out the [local setup 📕](https://docs.browser-use.com/development/local-setup).
 
 ## Cooperations
@@ -146,12 +170,11 @@ We are forming a commission to define best practices for UI/UX design for browse
 Together, we're exploring how software redesign improves the performance of AI agents and gives these companies a competitive advantage by designing their existing software to be at the forefront of the agent age.
 
 Email [Toby](mailto:tbiddle@loop11.com?subject=I%20want%20to%20join%20the%20UI/UX%20commission%20for%20AI%20agents&body=Hi%20Toby%2C%0A%0AI%20found%20you%20in%20the%20browser-use%20GitHub%20README.%0A%0A) to apply for a seat on the committee.
+
 ## Citation
 
 If you use Browser Use in your research or project, please cite:
 
-
-    
 ```bibtex
 @software{browser_use2024,
   author = {Müller, Magnus and Žunič, Gregor},
@@ -161,20 +184,14 @@ If you use Browser Use in your research or project, please cite:
   url = {https://github.com/browser-use/browser-use}
 }
 ```
- 
-
 
  <div align="center"> <img src="https://github.com/user-attachments/assets/402b2129-b6ac-44d3-a217-01aea3277dce" width="400"/> 
  
 [![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/gregpr07)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/mamagnus00)
  
- </div> 
+ </div>
 
 <div align="center">
 Made with ❤️ in Zurich and San Francisco
- </div> 
-
-
-
-
+ </div>

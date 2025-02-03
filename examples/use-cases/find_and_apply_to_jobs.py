@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 controller = Controller()
 
 # NOTE: This is the path to your cv file
-CV = Path.cwd() / 'cv_04_24.pdf'
+CV = Path.cwd() / 'kunal_cv_02_25.pdf'
 
 if not CV.exists():
 	raise FileNotFoundError(f'You need to set the path to your cv file in the CV variable. CV file not found at {CV}')
@@ -116,14 +116,6 @@ browser = Browser(
 
 
 async def main():
-	# ground_task = (
-	# 	'You are a professional job finder. '
-	# 	'1. Read my cv with read_cv'
-	# 	'2. Read the saved jobs file '
-	# 	'3. start applying to the first link of Amazon '
-	# 	'You can navigate through pages e.g. by scrolling '
-	# 	'Make sure to be on the english version of the page'
-	# )
 	ground_task = (
 		'You are a professional job finder. '
 		'1. Read my cv with read_cv'
@@ -132,20 +124,10 @@ async def main():
 	)
 	tasks = [
 		ground_task + '\n' + 'Google',
-		# ground_task + '\n' + 'Amazon',
-		# ground_task + '\n' + 'Apple',
-		# ground_task + '\n' + 'Microsoft',
-		# ground_task
-		# + '\n'
-		# + 'go to https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan%2C-Remote/Fulfillment-Analyst---New-College-Graduate-2025_JR1988949/apply/autofillWithResume?workerSubType=0c40f6bd1d8f10adf6dae42e46d44a17&workerSubType=ab40a98049581037a3ada55b087049b7 NVIDIA',
-		# ground_task + '\n' + 'Meta',
 	]
-	model = AzureChatOpenAI(
-		model='gpt-4o',
-		api_version='2024-10-21',
-		azure_endpoint=os.getenv('AZURE_OPENAI_ENDPOINT', ''),
-		api_key=SecretStr(os.getenv('AZURE_OPENAI_KEY', '')),
-	)
+	
+	# Replace Azure model with regular OpenAI
+	model = ChatOpenAI(model='gpt-4o')  # or 'gpt-3.5-turbo' if you prefer
 
 	agents = []
 	for task in tasks:
